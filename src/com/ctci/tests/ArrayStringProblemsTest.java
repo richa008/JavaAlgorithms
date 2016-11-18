@@ -28,4 +28,14 @@ public class ArrayStringProblemsTest {
 
     }
 
+    @org.junit.Test
+    public void areStringsPermutationTest() throws Exception{
+        assertEquals(prob.areStringsPermutation("", "ff"), false);
+        assertEquals(prob.areStringsPermutation("aaab", "aabb"), false);
+        assertEquals(prob.areStringsPermutation("aabb", "aaab"), false);
+        assertEquals(prob.areStringsPermutation("abcd", "efgh"), false);
+        assertEquals(prob.areStringsPermutation("abcds", "sabdc"), true);
+
+    }
+
 }

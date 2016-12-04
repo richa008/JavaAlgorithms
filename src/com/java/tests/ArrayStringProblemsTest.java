@@ -1,6 +1,6 @@
-package com.ctci.tests;
+package com.java.tests;
 
-import com.ctci.problems.ArrayStringProblems;
+import com.java.problems.ArrayStringProblems;
 
 import static org.junit.Assert.*;
 

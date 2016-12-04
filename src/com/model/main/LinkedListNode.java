@@ -11,7 +11,7 @@ public class LinkedListNode {
 
     public LinkedListNode next;
 
-    public LinkedListNode(int data){
+    public LinkedListNode(int data) {
         this.data = data;
         this.next = null;
     }

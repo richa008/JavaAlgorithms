@@ -13,20 +13,19 @@ public class LinkedListProblems {
     /**
      * Remove duplicate nodes in a linked lit
      * Time complexity - O(n), Space complexity - O(n)
-     *
      */
-    public void removeDuplicatesFromList(LinkedListNode head){
+    public void removeDuplicatesFromList(LinkedListNode head) {
 
-        if(head == null){
+        if (head == null) {
             return;
         }
         HashMap<Integer, Integer> hashMap = new HashMap<Integer, Integer>();
         LinkedListNode current = head;
         LinkedListNode previous = null;
-        while (current != null){
-            if(hashMap.get(current.data) != null && previous != null){
+        while (current != null) {
+            if (hashMap.get(current.data) != null && previous != null) {
                 previous.next = current.next;
-            }else{
+            } else {
                 hashMap.put(current.data, 1);
                 previous = current;
             }

@@ -15,14 +15,13 @@ public class LinkedList {
      *
      * @param data - int value of the new node
      */
-    public void addNodeToTail(int data){
+    public void addNodeToTail(int data) {
 
-        if(head == null){
+        if (head == null) {
             head = new LinkedListNode(data);
-        }
-        else{
+        } else {
             LinkedListNode pointer = head;
-            while(pointer.next != null){
+            while (pointer.next != null) {
                 pointer = pointer.next;
             }
             pointer.next = new LinkedListNode(data);
@@ -34,19 +33,19 @@ public class LinkedList {
      *
      * @param data - int value of the node to be deleted
      */
-    public void deleteNode(int data){
-        if(head == null){
+    public void deleteNode(int data) {
+        if (head == null) {
             return;
         }
-        if(head.data == data){
+        if (head.data == data) {
             head = head.next;
             return;
         }
         LinkedListNode ptr = head;
-        while (ptr.next != null){
-            if(ptr.next.data == data){
+        while (ptr.next != null) {
+            if (ptr.next.data == data) {
                 ptr.next = ptr.next.next;
-            }else {
+            } else {
                 ptr = ptr.next;
             }
         }
@@ -57,13 +56,13 @@ public class LinkedList {
      *
      * @return - Returns an arrayList of all data values of the linked list
      */
-    public ArrayList getDataFromLinkedList(){
+    public ArrayList getDataFromLinkedList() {
 
         ArrayList dataArray = new ArrayList();
 
         LinkedListNode pointer = head;
-        while(pointer.next != null){
-           dataArray.add(pointer.data);
+        while (pointer.next != null) {
+            dataArray.add(pointer.data);
             pointer = pointer.next;
         }
         dataArray.add(pointer.data);

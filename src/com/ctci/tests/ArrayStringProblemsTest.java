@@ -1,11 +1,12 @@
 package com.ctci.tests;
 
 import com.ctci.problems.ArrayStringProblems;
+
 import static org.junit.Assert.*;
 
 /**
  * Created by richa on 11/16/16.
- *
+ * <p>
  * Unit test for ArrayStringProblems
  */
 public class ArrayStringProblemsTest {
@@ -23,7 +24,7 @@ public class ArrayStringProblemsTest {
     }
 
     @org.junit.Test
-    public void doesStringHaveUniqueCharactersTest() throws Exception{
+    public void doesStringHaveUniqueCharactersTest() throws Exception {
         assertEquals(prob.doesStringHaveUniqueCharacters(""), true);
         assertEquals(prob.doesStringHaveUniqueCharacters("abcdba"), false);
         assertEquals(prob.doesStringHaveUniqueCharacters("abhjk"), true);
@@ -31,7 +32,7 @@ public class ArrayStringProblemsTest {
     }
 
     @org.junit.Test
-    public void areStringsPermutationTest() throws Exception{
+    public void areStringsPermutationTest() throws Exception {
         assertEquals(prob.areStringsPermutation("", "ff"), false);
         assertEquals(prob.areStringsPermutation("aaab", "aabb"), false);
         assertEquals(prob.areStringsPermutation("aabb", "aaab"), false);

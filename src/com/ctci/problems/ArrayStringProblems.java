@@ -9,24 +9,25 @@ import java.util.HashMap;
 public class ArrayStringProblems {
 
     //TODO: Solve without using extra array
+
     /**
      * Determine if a string has unique characters
      * Assumption made - String is made of unicode characters
      *
      * @return - Returns true if the string has unique characters
      */
-    public boolean doesStringHaveUniqueCharacters(String myString){
-        if(myString.length() > 128){
+    public boolean doesStringHaveUniqueCharacters(String myString) {
+        if (myString.length() > 128) {
             return false;
         }
 
         HashMap<Character, Integer> hashMap = new HashMap<>();
 
-        for(int i = 0; i < myString.length(); i++){
+        for (int i = 0; i < myString.length(); i++) {
             char c = myString.charAt(i);
-            if(hashMap.get(c) != null){
+            if (hashMap.get(c) != null) {
                 return false;
-            }else{
+            } else {
                 hashMap.put(c, 1);
             }
         }
@@ -39,30 +40,30 @@ public class ArrayStringProblems {
      *
      * @return - Returns true if the string is permutation
      */
-    public boolean areStringsPermutation(String string1, String string2){
+    public boolean areStringsPermutation(String string1, String string2) {
 
-        if(string1.length() != string2.length()){
+        if (string1.length() != string2.length()) {
             return false;
         }
         HashMap<Character, Integer> hashMap = new HashMap<>();
 
-        for(int i = 0; i < string1.length(); i++){
+        for (int i = 0; i < string1.length(); i++) {
             char c = string1.charAt(i);
             Integer val = hashMap.get(c);
-            if(val == null){
+            if (val == null) {
                 hashMap.put(c, 1);
-            }else{
+            } else {
                 hashMap.put(c, ++val);
             }
         }
 
-        for(int i = 0; i < string2.length(); i++){
+        for (int i = 0; i < string2.length(); i++) {
             char c = string2.charAt(i);
             Integer val = hashMap.get(c);
-            if(val == null){
+            if (val == null) {
                 return false;
             }
-            if(--val < 0){
+            if (--val < 0) {
                 return false;
             }
             hashMap.put(c, val);
@@ -70,5 +71,6 @@ public class ArrayStringProblems {
         }
         return true;
     }
+
 }
 

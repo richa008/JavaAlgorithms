@@ -5,6 +5,8 @@ import static org.junit.Assert.*;
 
 /**
  * Created by richa on 11/16/16.
+ *
+ * Unit test for ArrayStringProblems
  */
 public class ArrayStringProblemsTest {
 

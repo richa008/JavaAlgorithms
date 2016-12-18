@@ -1,4 +1,4 @@
-package com.java.problems;
+package com.java.ctci.problems;
 
 import java.util.HashMap;
 

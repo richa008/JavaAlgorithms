@@ -1,6 +1,6 @@
-package com.java.tests;
+package com.java.ctci.tests;
 
-import com.java.problems.LinkedListProblems;
+import com.java.ctci.problems.LinkedListProblems;
 import com.model.main.LinkedList;
 import com.model.main.LinkedListNode;
 import org.junit.After;

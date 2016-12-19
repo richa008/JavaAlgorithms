@@ -60,7 +60,7 @@ public class LinkedListProblems {
         return p1;
     }
 
-    /*
+    /**
      * Deletes a node in the middle of a singly linked list given only access to that node
      *
      *  @param node - Node to be deleted
@@ -76,7 +76,7 @@ public class LinkedListProblems {
         }
     }
 
-    /*
+    /**
      *  Partitions linked list around a value pivot such that nodes less than pivot come before all nodes greater than or equal to pivot
      *
      *  @param head - head of the linkedlist

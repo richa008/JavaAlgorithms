@@ -43,6 +43,7 @@ public class BinarySearchTree {
         }
     }
 
+    //TODO: Do iterative preorder, inorder and postporder
     public void printPreorder(TreeNode node){
         if(node != null){
             System.out.println(node.data);

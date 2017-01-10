@@ -6,11 +6,13 @@ package com.model.main;
  */
 public class TreeNode {
 
-    int data;
+    public int data;
 
     public TreeNode leftChild;
 
     public TreeNode rightChild;
+
+    public TreeNode parent;
 
     public TreeNode(int data){
         this.data = data;

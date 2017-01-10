@@ -272,4 +272,53 @@ public class TreeProblems {
         return (matches(t1.leftChild, t2.leftChild) && matches(t1.rightChild, t2.rightChild));
     }
 
+    /**
+     *  Print all paths which sum to a given value. Path does not have to start at the root or end at the leaf
+     *
+     * @param root - root node of the tree
+     * @param sum - sum to which the paths must add up
+     */
+    public void printPathsWithSum(TreeNode root, int sum){
+        if(root == null){
+            return;
+        }
+        int depth = findDepth(root);
+        int paths[] = new int[depth];
+        findSumOfPaths(root, paths, sum, 0);
+    }
+
+    private void findSumOfPaths(TreeNode node, int paths[], int sum, int level){
+        if(node == null){
+            return;
+        }
+
+        if(level == paths.length){
+            paths[level] = node.data;
+        }
+
+        int t = 0;
+        for(int i = level; i >= 0; i--){
+            t = t + paths[i];
+            if(t == sum){
+                printPath(paths);
+            }
+        }
+
+        findSumOfPaths(node.leftChild, paths, sum, level + 1);
+        findSumOfPaths(node.rightChild, paths, sum, level + 1);
+    }
+
+    private int findDepth(TreeNode node){
+        if(node == null){
+            return 0;
+        }
+        return (1 + Math.max(findDepth(node.leftChild), findDepth(node.rightChild)));
+    }
+
+    private void printPath(int paths[]){
+        for(int i = 0; i < paths.length; i++){
+            System.out.println(paths[i]);
+        }
+    }
+
 }

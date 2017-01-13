@@ -1,4 +1,4 @@
-package com.java.ctci.design.blackjackGame;
+package com.java.ctci.design.BlackjackGame;
 
 import java.util.ArrayList;
 
@@ -8,9 +8,9 @@ import java.util.ArrayList;
  */
 public class Hand {
 
-    ArrayList<Card> cards;
+    private ArrayList<Card> cards;
 
-    int count;
+    private int count;
 
     public void removeCard(Card card){
 
@@ -23,7 +23,7 @@ public class Hand {
     public Integer score(){
         int score = 0;
         for(Card card: cards){
-            score = score + card.value;
+            score = score + card.getValue();
         }
         return score;
     }

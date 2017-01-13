@@ -1,4 +1,4 @@
-package com.java.ctci.design.blackjackGame;
+package com.java.ctci.design.BlackjackGame;
 
 import java.util.ArrayList;
 

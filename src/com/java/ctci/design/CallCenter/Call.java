@@ -1,4 +1,4 @@
-package com.java.ctci.design.callDispatcher;
+package com.java.ctci.design.CallCenter;
 
 /**
  * Created by richa on 1/12/17.
@@ -6,9 +6,9 @@ package com.java.ctci.design.callDispatcher;
  */
 public class Call {
 
-    Employee handler;
+    private Employee handler;
 
-    boolean callSatisfied;
+    private boolean callSatisfied;
 
     public void setHandler(Employee employee){
         handler = employee;

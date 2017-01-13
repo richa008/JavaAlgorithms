@@ -1,4 +1,4 @@
-package com.java.ctci.design.callDispatcher;
+package com.java.ctci.design.CallCenter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,9 +14,9 @@ public class CallCenter {
      *  employees[1] = managers
      *  employees[2] = directors
      */
-    List<List<Employee>> employees;
+    private List<List<Employee>> employees;
 
-    ArrayList<Call> callQueues;
+    private ArrayList<Call> callQueues;
 
     public Employee getAvailableEmployee(Rank rank){
         return null;

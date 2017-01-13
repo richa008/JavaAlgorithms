@@ -1,4 +1,4 @@
-package com.java.ctci.design.blackjackGame;
+package com.java.ctci.design.BlackjackGame;
 
 /**
  * Created by richa on 1/12/17.
@@ -6,11 +6,11 @@ package com.java.ctci.design.blackjackGame;
  */
 public class Card {
 
-    int value;
+    private int value;
 
-    Suit suit;
+    private Suit suit;
 
-    boolean isAvailable;
+    private boolean isAvailable;
 
     public void markAvailable(Card card){
 
@@ -18,6 +18,10 @@ public class Card {
 
     public void markUnavailable(Card card){
 
+    }
+
+    public int getValue(){
+        return value;
     }
 
 }

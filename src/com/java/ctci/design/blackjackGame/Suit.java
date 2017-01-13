@@ -1,4 +1,4 @@
-package com.java.ctci.design.blackjackGame;
+package com.java.ctci.design.BlackjackGame;
 
 /**
  * Created by richa on 1/12/17.

@@ -6,7 +6,7 @@ package com.crackingCodingInterview.design.BlackjackGame;
  */
 public class Card {
 
-    private int value;
+    protected int value;
 
     private Suit suit;
 

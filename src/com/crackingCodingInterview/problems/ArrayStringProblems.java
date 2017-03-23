@@ -72,5 +72,29 @@ public class ArrayStringProblems {
         return true;
     }
 
+    public int lengthOfLongestSubstring(String s) {
+        if(s == null || s.length() == 0){
+            return 0;
+        }
+        HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+        int max = 0, index = 0;
+
+        for(int i = 0; i < s.length(); i++){
+            if(map.containsKey(s.charAt(i))){
+                index = Math.max(index, s.charAt(i) + 1);
+            }
+            map.put(s.charAt(i), i);
+            max = Math.max(max, i - index + 1);
+
+        }
+        return max;
+    }
+
+    public static void main(String args[]){
+        ArrayStringProblems a = new ArrayStringProblems();
+
+        a.lengthOfLongestSubstring("pwwkew");
+    }
+
 }
 

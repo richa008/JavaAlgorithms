@@ -8,4 +8,22 @@ package com.leetcode.easy;
  Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.
  */
 public class HouseRobber {
+    public class Solution {
+        public int rob(int[] nums) {
+            int odd = 0, even = 0;
+            int maxAmount = 0;
+            for(int i = 0; i < nums.length; i++){
+
+                if((i % 2) == 0){
+                    even = Math.max(odd, nums[i] + even);
+                    maxAmount = Math.max(maxAmount, even);
+                }else{
+                    odd = Math.max(even, nums[i] + odd);
+                    maxAmount = Math.max(maxAmount, odd);
+                }
+
+            }
+            return maxAmount;
+        }
+    }
 }

@@ -7,6 +7,10 @@ package com.leetcode.medium;
 
  Example:
  For num = 5 you should return [0,1,1,2,1,2].
+ 
+ Index : 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+ num : 0 1 1 2 1 2 2 3 1 2 2 3 2 3 3 4
+ 
  */
 public class CountingBits {
     public class Solution {

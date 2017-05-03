@@ -13,6 +13,14 @@ import java.util.List;
  */
 public class TripAdviserProblems {
 
+    char[] cesearCipher(char array[], int k){
+        for(int i = 0; i < array.length; i++){
+            int next = ((array[i] - 'a') + k) % 26;
+            array[i] = (char)(next + 'a');
+        }
+        return array;
+    }
+
     /**
      *  Find the second most max number in an array
      * @param array
@@ -107,7 +115,7 @@ public class TripAdviserProblems {
 
     public static void main(String args[]){
         TripAdviserProblems t = new TripAdviserProblems();
-        int array[] = {1};
-        System.out.println(t.getNextMax(array));
+        char array[] = {'x', 'f', 'z'};
+        System.out.println(t.cesearCipher(array, -3));
     }
 }
